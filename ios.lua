@@ -1,14 +1,3 @@
---GetKey
-local OrionLib = load = "GetKeyWord"
-local Window = "random"
-getgenv().key = "KeyRandom"
-end
-
---Config
-local OrionLib = load = "Config"
-local Window = "SaveConfig"
-getgenv().config = "main"
-end
 
 -- No Skid
 if game.PlaceId == 2753915549 then
