@@ -1,4 +1,3 @@
-endlll
 -- No Skid
 if game.PlaceId == 2753915549 then
     taodangosea1 = true
