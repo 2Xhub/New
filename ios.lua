@@ -1,4 +1,4 @@
-
+endlll
 -- No Skid
 if game.PlaceId == 2753915549 then
     taodangosea1 = true
@@ -1793,5 +1793,101 @@ G:AddToggle({
 	Callback = function(Value)
 		_G.AutoBoss = Value
         Djtmestop(_G.AutoBoss)
+	end    
+})
+
+local Section = G:AddSection({
+	Name = "Others"
+})
+
+G:AddToggle({
+	Name = "Auto Elite",
+	Default = false,
+	Save = true,
+	Flag = "Auto Elite",
+	Callback = function(Value)
+		_G.AutoElite = Value
+        Djtmestop(_G.AutoElite)
+	end    
+})
+
+G:AddToggle({
+	Name = "Auto Factory",
+	Default = false,
+	Save = true,
+	Flag = "Auto Factory",
+	Callback = function(Value)
+		_G.AutoFactory = Value
+        Djtmestop(_G.AutoFactory)
+	end    
+})
+
+G:AddToggle({
+	Name = "Auto Castle Raid",
+	Default = false,
+	Save = true,
+	Flag = "Auto Castle Raid",
+	Callback = function(Value)
+		_G.AutoCastleRaid = Value
+        Djtmestop(_G.AutoCastleRaid)
+	end    
+})
+
+-- Settings Tab :
+
+local Section = ST:AddSection({
+	Name = "Settings"
+})
+
+ST:AddToggle({
+	Name = "Bring Mob",
+	Default = true,
+	Save = true,
+	Flag = "Bring Mob",
+	Callback = function(Value)
+		_G.BringMob = Value
+	end    
+})
+
+ST:AddToggle({
+	Name = "FastAttack",
+	Default = true,
+	Save = true,
+	Flag = "FastAttack",
+	Callback = function(Value)
+		_G.FastAttackOld = Value
+	end    
+})
+
+ST:AddDropdown({
+	Name = "FastAttack Delay",
+	Default = "0.175",
+	Options = {"0", "0.1", "0.15", "0.155", "0.16", "0.165", "0.17", "0.175", "0.18", "0.185"},
+	Callback = function(Value)
+		_G.FastAttackDelay = Value
+	end    
+})
+
+ST:AddToggle({
+	Name = "Anti Afk",
+	Default = true,
+	Callback = function(Value)
+		_G.AntiAfk = Value
+	end    
+})
+
+ST:AddToggle({
+	Name = "Auto Haki",
+	Default = true,
+	Callback = function(Value)
+		_G.AUTOHAKI = Value
+	end    
+})
+
+ST:AddToggle({
+	Name = "Bypass Teleport",
+	Default = true,
+	Callback = function(Value)
+		BypassTP = Value
 	end    
 })
