@@ -3,18 +3,18 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
-    Title = "Kuroko Hub | Blox Fruits",
+    Title = "Misc X Hub | Blox Fruits V2",
     SubTitle = "by Đạt Mods",
     TabWidth = 180,
     Size = UDim2.fromOffset(470, 330),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
-    Theme = "D",
+    Theme = "Dark",
     MinimizeKey = Enum.KeyCode.End -- Used when theres no MinimizeKeybind
 })
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "home" }),   
     Stats = Window:AddTab({ Title = "Stats", Icon = "plus-circle" }),
-    Playe = Window:AddTab({ Title = "Player", Icon = "baby" }),
+    Player = Window:AddTab({ Title = "Player", Icon = "baby" }),
     Teleport = Window:AddTab({ Title = "Teleport", Icon = "palmtree" }),
     Fruit = Window:AddTab({ Title = "Devil Fruit", Icon = "cherry" }),
     Raid = Window:AddTab({ Title = "Dungeon", Icon = "swords" }),
@@ -2312,7 +2312,7 @@ ImageButton.Parent = ScreenGui
 ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
 ImageButton.Size = UDim2.new(0.0627121851, 0, 0.107579626, 0)
-ImageButton.Image = "rbxassetid://16513855063"
+ImageButton.Image = "rbxassetid://18327885998"
 
 UICorner.CornerRadius = UDim.new(0, 30)
 UICorner.Parent = ImageButton
