@@ -2569,7 +2569,7 @@ local posZ = 15
 
 
     Tabs.Main:AddButton({
-        Title = "Fps Booster",
+        Title = "Fix Lag [New]",
         Description = "Boost your fps",
         Callback = function()
             FPSBooster()
@@ -3320,6 +3320,7 @@ spawn(function()
 
 
 
+	elseif Second_Sea then
     local ToggleVatChatKiDi = Tabs.Main:AddToggle("ToggleVatChatKiDi", {Title = "Auto Farm Ectoplasm", Default = false })
     ToggleVatChatKiDi:OnChanged(function(Value)
         _G.Ecto = Value
