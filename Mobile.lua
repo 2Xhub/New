@@ -3,7 +3,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
-    Title = "Misc X Hub | Blox Fruits V2",
+    Title = "Misc  Hub | Blox Fruits V2",
     SubTitle = "by Đạt Mods",
     TabWidth = 180,
     Size = UDim2.fromOffset(470, 330),
@@ -15,7 +15,7 @@ local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "home" }),   
     Stats = Window:AddTab({ Title = "Stats", Icon = "plus-circle" }),
     Player = Window:AddTab({ Title = "Player", Icon = "baby" }),
-    Teleport = Window:AddTab({ Title = "Teleport", Icon = "palmtree" }),
+    Teleport = Window:AddTab({ Title = "Travel", Icon = "palmtree" }),
     Fruit = Window:AddTab({ Title = "Devil Fruit", Icon = "cherry" }),
     Raid = Window:AddTab({ Title = "Dungeon", Icon = "swords" }),
     Race = Window:AddTab({ Title = "Race V4", Icon = "chevrons-right" }),
@@ -2312,7 +2312,7 @@ ImageButton.Parent = ScreenGui
 ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
 ImageButton.Size = UDim2.new(0.0627121851, 0, 0.107579626, 0)
-ImageButton.Image = "rbxassetid://18327885998"
+ImageButton.Image = "rbxassetid://17303591587"
 
 UICorner.CornerRadius = UDim.new(0, 30)
 UICorner.Parent = ImageButton
@@ -3237,6 +3237,27 @@ spawn(function()
             end)
         end
     end
+end)
+
+
+local ToggleRandomBone = Tabs.Shop:AddToggle("ToggleRandomBone", {Title = "Random Bone", Default = false })
+ToggleRandomBone:OnChanged(function(Value)  
+		_G.AutoRandomBone = Value
+end)
+Options.ToggleRandomBone:SetValue(false)
+	
+spawn(function()
+	while wait(0.0000000000000000000000000000000000000000000000000001) do
+	if _G.AutoRandomBone then
+	local args = {
+	 [1] = "Bones",
+	 [2] = "Buy",
+	 [3] = 1,
+	 [4] = 1
+	}
+	game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+	end
+	end
 end)
 
 
@@ -4457,7 +4478,7 @@ CamShake:Stop()
       if isnetworkowner then
       return isnetworkowner(object)
       else
-        if (object.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 350 then
+        if (object.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 300 then
       return true
       end
       return false
@@ -5772,7 +5793,7 @@ end)
 
 Tabs.Race:AddParagraph({
     Title = "Misc Race",
-    Content = "Auto Farm Acient Quest"
+    Content = "Farm Acient Quest"
 })
 
 
@@ -5859,27 +5880,6 @@ end)
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 --shop
-
-local ToggleRandomBone = Tabs.Shop:AddToggle("ToggleRandomBone", {Title = "Random Bone", Default = false })
-ToggleRandomBone:OnChanged(function(Value)  
-		_G.AutoRandomBone = Value
-end)
-Options.ToggleRandomBone:SetValue(false)
-	
-spawn(function()
-	while wait(0.0000000000000000000000000000000000000000000000000001) do
-	if _G.AutoRandomBone then
-	local args = {
-	 [1] = "Bones",
-	 [2] = "Buy",
-	 [3] = 1,
-	 [4] = 1
-	}
-	game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-	end
-	end
-	end)
-
 
 Tabs.Shop:AddButton({
 	Title = "Geppo",
