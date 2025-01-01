@@ -3,8 +3,8 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
-    Title = "Misc  Hub | Blox Fruits V2",
-    SubTitle = "by Đạt Mods",
+    Title = "RaftK Hub",
+    SubTitle = "Blox Fruits",
     TabWidth = 180,
     Size = UDim2.fromOffset(470, 330),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
